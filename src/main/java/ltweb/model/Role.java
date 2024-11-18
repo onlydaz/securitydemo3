@@ -1,19 +1,8 @@
-package ltweb.entity;
-
-import java.util.HashSet;
-import java.util.Set;
-
+package ltweb.model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.io.Serializable;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "roles")
 public class Role implements Serializable {
@@ -24,4 +13,21 @@ public class Role implements Serializable {
 
     @Column(name = "role_name", length = 50, columnDefinition = "nvarchar(50) not null")
     private String name;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+    
 }

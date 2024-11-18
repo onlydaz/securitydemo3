@@ -1,4 +1,5 @@
-package ltweb.dto;
+package ltweb.model;
+
 import lombok.Data;
 
 @Data
